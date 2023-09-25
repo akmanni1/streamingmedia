@@ -1,0 +1,436 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1em;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* AUDIO.TXT */
+audio::-webkit-media-controls-mute-button {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* SCROLL.TXT */
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF;
+}
+
+/* Start of my CSS edits */
+html {
+    background-color: #020659;
+}
+body {
+    background-color: #FFFFFF;
+    min-width: 375px;
+    max-width: 834px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #030A8C;
+    color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+nav h2 {
+    font-variant-caps: small-caps;
+    font-size: 1.5em;
+    line-height: 2em;
+    font-weight: bold;
+    flex-grow: 2;
+}
+nav h3 {
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: lighter;
+    flex-grow: 1;
+}
+nav li {
+    text-align: center;
+    margin: 10px 15px;
+}
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+nav a:hover {
+    color: #590242;
+}
+header {
+    background-image: linear-gradient(to right, 
+    #030A8C, #020873,#000000);
+    color: #FFFFFF;
+    position: relative;
+    z-index: 0;
+}
+header h1, header p { 
+    margin: 0px 20px;
+}
+h1 {
+    font-size: 1.25em;
+    line-height: 2em;
+}
+h1, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+main h2 { 
+    font-weight: bold;
+    margin-top: 10px;
+}
+h2, h3 {
+    font-size: 1em;
+    line-height: 2em;
+}
+audio {
+    position: absolute;
+    left: 5px;
+    bottom: 150px;
+}
+section h2 { 
+    margin-left: 20px;
+    color: #590242;
+}
+.scroll { 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll section {
+    position: relative;
+    margin: 5px 5px 10px;
+  }
+.scroll div {
+    position: absolute;
+    top: 251px;
+    width: 350px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 5px;
+    color: #590242;
+}
+#playlists div, #curated div { 
+    text-align: center;
+}
+p, dl, dd {
+    font-size: 1em;
+}
+dl {
+    display: flex;
+}
+dt {
+    font-style: italic;
+    padding-right: 5px;
+}
+.more {
+    background-color: #590242;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 150px;
+    text-align: center;
+    margin: 10px 30px 0px;
+}
+.more a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.more:hover {
+    background-color: #020659;
+}
+footer {
+    background-color: #FFFFFF;
+    position: relative;
+    margin: 0 auto;
+    min-width: 375px;
+    max-width: 834px;
+    line-height: 1em;
+    z-index: 0;
+    display: inline;
+}
+footer p {
+    margin: 20px;
+    font-size: .75em;
+    color: #590242;
+    text-align: center;
+    font-style: italic;
+}
+
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 375PX */
+ @media screen and (min-width: 375px) {
+    /* Menu Code for Mobile First Style */ 
+    ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #FFFFFF;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #FFFFFF;
+        content: '';display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    body, header, main, footer {
+        width: 375px;
+        margin: 0 auto;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    /* nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    } */
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        min-width: 375px;
+    }
+    #trending, #playlists, #curated {
+        width: 375px;
+        height: 450px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    #playlists .scroll, #curated .scroll {
+        height: 330px;
+    }
+    #playlists .scroll {
+        background-color: #2699FB;
+    }
+    #curated .scroll {
+        background-color: #2104D9;
+    }
+    #playlists .scroll section, #curated .scroll section {
+        display: grid;
+        position: relative;
+        width: 190px;
+        height: 300px;
+    }
+    #playlists .scroll div, #curated .scroll div {
+        position: absolute;
+        width: 160px;
+        height: 275px;
+        top: 0px;
+    }
+    #playlists .scroll div {
+        background-color: #0D8DFB;
+    }
+    #curated .scroll div {
+        background-color: #030A8C;
+    }
+    #playlists .scroll dl, #curated .scroll dl {
+        display: block;
+        padding: 10px;
+        color: #FFFFFF;
+    }
+    #playlists .scroll dt, #curated .scroll dt {
+        position: relative;
+    }
+    #playlists .scroll dd, #curated .scroll dd {
+        position: relative;
+    }
+}
+  
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 834PX */
+@media screen and (min-width: 834px) {
+    body, nav, header, main, footer {
+        width: 834px;
+        margin: 0 auto;
+    }
+    nav {
+        display: flex;
+    }
+    nav ul {
+        overflow: visible;
+        display: grid;
+        max-height: 100%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    header {
+        padding-top: 65px;
+    }
+    main {
+        max-width: 834px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #trending {
+        width: 834px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    #playlists, #curated {
+        width: 415px;
+        height: 650px;
+        margin: 0;
+    }
+    #playlists {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #curated {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #playlists .scroll, #curated .scroll {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 500px;
+    }
+    #playlists .scroll {
+        background-color: #2699FB;
+    }
+    #curated .scroll {
+        background-color: #2104D9;
+    }
+    #playlists .scroll section, #curated .scroll section {
+        display: grid;
+        position: relative;
+        width: 375px;
+        height: 150px;
+    }
+    #playlists .scroll div, #curated .scroll div {
+        position: absolute;
+        width: 390px;
+        height: 135px;
+        top: 0px;
+        padding: 0px;
+    }
+    #playlists .scroll div {
+        background-color: #0D8DFB;
+    }
+    #curated .scroll div {
+        background-color: #030A8C;
+    }
+    #playlists .scroll dl, #curated .scroll dl {
+        display: flex;
+        /* padding: 10px 20px 10px 10px; */
+        color: #FFFFFF;
+    }
+    #playlists .scroll dt, #curated .scroll dt {
+        position: relative;
+        padding-right: 0px;
+    }
+    #playlists .scroll dd, #curated .scroll dd {
+        position: relative;
+        left: 10px;
+    }
+}
